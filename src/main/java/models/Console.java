@@ -17,6 +17,7 @@ public class Console {
     private String model;
     private String region;
     private List<Game> games;
+    private List<Game> gameBeingPlayed;
 
     public Console() {
     }

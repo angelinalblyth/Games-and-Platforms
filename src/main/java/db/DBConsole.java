@@ -31,6 +31,7 @@ public class DBConsole {
         try {
             Criteria criteria = session.createCriteria(Game.class);
             criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
+
             criteria.createAlias("consoles", "console");
             criteria.add(Restrictions.eq("console.id", console.getId()));
             results = criteria.list();
